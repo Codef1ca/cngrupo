@@ -140,7 +140,7 @@ const handleSubMenuClick = (submenu) => {
                     <div className={`navbar-links-container ${isOpen && "open"}`}>
                         <ul className="ul-nav">
                             <li className="link-nav-chapa" onClick={() => handleSubMenuClick('submenu1')}>
-                                <Link className="li" to="/home">NUESTRA EMPRESA</Link>
+                                <Link className="li" to="/">NUESTRA EMPRESA</Link>
                                 {openSubMenu === 'submenu1' && (
                                     <ul className="ul-menu">
                                         <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/quiénes">¿Quiénes somos?</Link></li><hr className="linea-menuA"></hr></div>

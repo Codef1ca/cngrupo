@@ -20,7 +20,7 @@ const Myroutes = () => {
   return (
     <div>
         <Routes>
-          <Route path="/home" element={<Navbarblanco />} />
+          <Route path="/" element={<Navbarblanco />} />
           <Route path="/vision" element={<Vision />} />
          <Route path="/historia" element={<Historia />} /> 
          <Route path="/info" element={<Info />} /> 
