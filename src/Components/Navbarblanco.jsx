@@ -3,16 +3,12 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Logo from '../Assets/cngrupoblanco.png'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import logo1 from '../Assets/loggo1.png';
-import logo2 from '../Assets/loggo2.png';
-import logo3 from '../Assets/loggo3.png';
-import logo4 from '../Assets/loggo4.png';
-import logo5 from '../Assets/loggo5.png';
-import carru1 from '../Assets/redi1.png';
-import carru2 from '../Assets/redi2.png';
-import carru3 from '../Assets/redi3.png';
-import carru4 from '../Assets/redi4.png';
-import carru5 from '../Assets/redi5.png';
+import logo1 from '../Assets/logo1.png';
+import logo2 from '../Assets/logo2.png';
+import logo3 from '../Assets/logo3.png';
+import logo4 from '../Assets/logo4.png';
+import logo5 from '../Assets/logo5.png';
+import logo6 from '../Assets/logo6.png';
 import { FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import 'react-multi-carousel/lib/styles.css';
 import {Swiper, SwiperSlide} from "swiper";
@@ -21,6 +17,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import videoSource from '../Assets/Home Cn web v3 .mp4';
+import { useTranslation} from "react-i18next"
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 import Slider from "./Slider";
@@ -28,7 +25,7 @@ import Slider from "./Slider";
 
 
 const LogosCarousel = () => {
-    const logos = [logo1, logo2, logo3, logo4, logo5];
+    const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -67,7 +64,7 @@ const LogosCarousel = () => {
 
   const Navchapa = () => {
 
-    const [language, setLanguage] = useState('EN');
+    const [t, i18next] = useTranslation("global");
     const [isOpen, setIsOpen] = useState(false);
     const [openSubMenu, setOpenSubMenu] = useState(null);
 
@@ -140,19 +137,18 @@ const handleSubMenuClick = (submenu) => {
                     <div className={`navbar-links-container ${isOpen && "open"}`}>
                         <ul className="ul-nav">
                             <li className="link-nav-chapa" onClick={() => handleSubMenuClick('submenu1')}>
-                                <Link className="li" to="/">NUESTRA EMPRESA</Link>
+                                <Link className="li" to="/">{t("li.OUR COMPANY")}</Link>
                                 {openSubMenu === 'submenu1' && (
                                     <ul className="ul-menu">
-                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/quiénes">¿Quiénes somos?</Link></li><hr className="linea-menuA"></hr></div>
-                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/vision">Visión & misión</Link></li><hr className="linea-menuA"></hr></div>
-                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/ejes">Ejes de compromiso</Link></li><hr className="linea-menuA"></hr></div>
-                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/historia">Historia</Link></li><hr className="linea-menuA"></hr></div>
-                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/info">Info impositiva</Link></li></div>
+                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/">{t("li.Who are we?")}</Link></li><hr className="linea-menuA"></hr></div>
+                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/">{t("li.Vision and mission")}</Link></li><hr className="linea-menuA"></hr></div>
+                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/">{t("li.History")}</Link></li><hr className="linea-menuA"></hr></div>
+                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/">{t("li.Tax information")}</Link></li></div>
                                     </ul>
                                 )}
                             </li>
                             <li className="link-nav-chapa" onClick={() => handleMenuClick('menu2')}>
-                                <div className="li" to="/mecanica">NUESTROS NEGOCIOS</div>
+                                <div className="li" to="/mecanica">{t("li.OUR BUSINESSES")}</div>
                                 {openMenu === 'menu2' && (
                                     <ul className="ul-menu2">
                                         <div className="ul-menu-linea"><li className="link-nav-submenu"><div onClick={(e) => { e.stopPropagation(); handleSubMenuClick('submenuA'); }} className="li">Oil & Gas</div>
@@ -162,7 +158,7 @@ const handleSubMenuClick = (submenu) => {
                                         <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/quiénes">COMBUSTIBLES DEL NORTE</Link></li><hr className="linea-menuOIL"></hr></div>
                                         <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/vision">CCN CHILE</Link></li><hr className="linea-menuOIL"></hr></div>
                                         <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/ejes">GAS DEL NORTE</Link></li><hr className="linea-menuOIL"></hr></div>
-                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/ejes">ESTACIONES DE SERVICIO</Link></li></div>
+                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/ejes">{t("li.SERVICE STATIONS")}</Link></li></div>
                                     </ul> )}</li><hr className="linea-menu"></hr></div>
 
                                         <div className="ul-menu-linea"><li className="link-nav-submenu" ><div onClick={(e) => { e.stopPropagation(); handleSubMenuClick('submenuB'); }} className="li">Agro</div>
@@ -173,7 +169,7 @@ const handleSubMenuClick = (submenu) => {
                                         <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/ejes">PUESTO EL MOLLAR</Link></li><hr className="linea-menuOIL"></hr></div>
                                         <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/ejes">PLANTA GUEMES</Link></li></div>
                                         </ul>)}</li><hr className="linea-menu"></hr></div>
-                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><div onClick={(e) => { e.stopPropagation(); handleSubMenuClick('submenuC'); }} className="li">Minería</div>
+                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><div onClick={(e) => { e.stopPropagation(); handleSubMenuClick('submenuC'); }} className="li">{t("li.Mining")}</div>
                                         {openSubMenu === 'submenuC' && (
                                         <ul className="ul-SUBmenu2">
                                         <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/quiénes">NECA</Link></li></div></ul>)}</li></div>
@@ -182,17 +178,27 @@ const handleSubMenuClick = (submenu) => {
                             </li>
 
                             <li className="link-nav-chapa" onClick={handleSubMenuClick3}>
-                                <div className="li" to="/chapaypintura">TRABAJÁ EN CN GRUPO</div>
+                                <div className="li" to="/chapaypintura">{t("li.WORK AT CN GROUP")}</div>
                                 {isSubMenuOpen3 && (
                                     <ul className="ul-menu3">
-                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/quiénes">Capital humano</Link></li></div>
+                                        <div className="ul-menu-linea"><li className="link-nav-submenu"><Link className="li" to="/quiénes">{t("li.Human capital")}</Link></li></div>
                                     </ul>
                                 )}
                             </li>
-                            <li className="link-nav-chapa"><Link className="li" to="/4x4">CONTACTO</Link></li>
+                            <li className="link-nav-chapa"><Link className="li" to="/4x4">{t("li.CONTACT")}</Link></li>
                             <li className="link-nav-chapab"><div className="botones">
-                            <button className={`language-button ${language === 'ES' ? 'active' : ''}`} onClick={() => setLanguage('ES')}>ES</button>
-                            <button className={`language-button ${language === 'EN' ? 'active' : ''}`}onClick={() => setLanguage('EN')}>EN</button>
+                            <button onClick={(event) => {
+    i18next.changeLanguage("es");
+    document.querySelectorAll('.language-button').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+}} className="language-button">ES</button>
+
+<button onClick={(event) => {
+    i18next.changeLanguage("en");
+    document.querySelectorAll('.language-button').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+}} className="language-button">EN</button>
+
                             </div></li>
                         </ul>
 
@@ -210,9 +216,9 @@ const handleSubMenuClick = (submenu) => {
         <div className="txt-redes">
             <div className="txt-container-empresa">
               <div className="linea-titulo">
-            <hr class="mi-linea"></hr><p className="nuestra-empresa">NUESTRA EMPRESA</p></div>
-            <h2 className="nuestra-empresa-txt">Somos un grupo de empresas que busca<br></br> brindar <span className="txt-empresa-span">soluciones integrales de distribución</span>,<br></br> a través de diferentes unidades de negocios<br></br> relacionadas con <span className="txt-empresa-span">Oil&Gas, Agro y Minería.</span></h2>
-            <button className="conocenos-btn">CONOCENOS</button>
+            <hr class="mi-linea"></hr><p className="nuestra-empresa">{t("li.OUR COMPANY")}</p></div>
+            <h2 className="nuestra-empresa-txt">{t("nuestra-empresa-txt.text1")}<br></br><span className="txt-empresa-span">{t("nuestra-empresa-txt.text2")}</span>,<br></br>{t("nuestra-empresa-txt.text3")}<br></br>{t("nuestra-empresa-txt.text4")}<span className="txt-empresa-span">{t("nuestra-empresa-txt.text5")}</span></h2>
+            <button className="conocenos-btn">{t("conocenos-btn.KNOW MORE")}</button>
             </div>
 
             <div className="redes-container-empresa">
@@ -225,31 +231,31 @@ const handleSubMenuClick = (submenu) => {
         </div>
       </div>
         <div className="recuadros">
-          <div className="recuadro"><div className="number">8</div><span className="recuadros-span">empresas lideres</span> en su <br></br>región, promoviendo la <br></br>innovación y la excelencia</div>
+          <div className="recuadro"><div className="number">8</div><span className="recuadros-span">{t("recuadros-span.Leading companies")}</span> {t("recuadros-span.in their")}<br></br>{t("recuadros-span.region promoting")}<br></br>{t("recuadros-span.innovation and excellence")}</div>
           <hr class="mi-linea-ver"></hr>
-          <div className="recuadro"><div className="number1">+35</div><span className="recuadros-span">años de trayectoria</span> en los <br></br>rubros de OIL & GAS, AGRO <br></br> y MINERÍA.</div>
+          <div className="recuadro"><div className="number1">+35</div><span className="recuadros-span">{t("recuadros-span.years of experience")}</span>{t("recuadros-span.in the")} <br></br>{t("recuadros-span.fields of oil & gas, agriculture,")}<br></br> {t("recuadros-span.and MINING")}</div>
           <hr class="mi-linea-ver"></hr>
-          <div className="recuadro"><div className="number2">6</div> <span className="recuadros-span">bases operativas</span><br></br> distribuidas en Salta y el <br></br>norte de Chile.</div>
+          <div className="recuadro"><div className="number2">6</div> <span className="recuadros-span">{t("recuadros-span.operational bases")}</span><br></br>{t("recuadros-span.distributed in Salta and")}<br></br>{t("recuadros-span.northern Chile")}</div>
           <hr class="mi-linea-ver"></hr>
-          <div className="recuadro"><div className="number3">+250</div> <span className="recuadros-span">colaboradores</span> en constante <br></br>crecimiento profesional.</div>
+          <div className="recuadro"><div className="number3">+250</div> <span className="recuadros-span">{t("recuadros-span.collaborators")}</span> {t("recuadros-span.in constant")}<br></br>{t("recuadros-span.professional growth")}</div>
         </div>
 
         <div className="containerfoto-cards">
           <div className="card-home">
             <div className="logo-home"></div>
             <h2 className="title-card-home">Oil&Gas</h2>
-            <p className="texto-card-home">Somos distribuidores oficiales de YPF, tanto de Diésel como de Gas envasado. Contamos con dos estaciones de servicio YPF ubicadas en Salta Capital y Las Lajitas.</p>
+            <p className="texto-card-home">{t("texto-card-home.completo")}</p>
             <hr class="mi-linea-home1"></hr>
           </div>
           <div className="card-home"><div className="logo-home2"></div>
             <h2 className="title-card-home">Agro</h2>
-            <p className="texto-card-home">Ofrecemos soluciones integrales al campo a través de la distribución de productos y servicios para la Protección y Nutrición de cultivos.</p>
+            <p className="texto-card-home">{t("texto-card-home.completo2")}</p>
           
             <hr class="mi-linea-home"></hr>
             </div>
           <div className="card-home"><div className="logo-home3"></div>
-          <h2 className="title-card-home">Minería</h2>
-            <p className="texto-card-home">Proporcionamos soluciones integrales y customizadas de gerenciamiento de proyectos para empresas mineras.</p>
+          <h2 className="title-card-home">{t("li.Mining")}</h2>
+            <p className="texto-card-home">{t("texto-card-home.completo3")}</p>
       
             
             
@@ -259,7 +265,7 @@ const handleSubMenuClick = (submenu) => {
           </div>
       
         <div className="my-carousel">
-        <h2 className="micarrusel-titulo">Nuestra cultura</h2>
+        <h2 className="micarrusel-titulo">{t("li.Our culture")}</h2>
         <hr class="mi-linea-carrusel"></hr>
         
         </div>
@@ -275,10 +281,10 @@ const handleSubMenuClick = (submenu) => {
             <p className="txt-foo">Av. Chile 1275, A4400 Salta</p>
           </div>
           <div className="txt2">
-            <p className="txt-foo2">© 2023 CN Grupo - Todos los derechos reservados</p>
+            <p className="txt-foo2">{t("txt-foo2.Footer")}</p>
           </div>
         </div>
-
+       
         </div>
     )
 }

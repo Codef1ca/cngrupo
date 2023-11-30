@@ -1,0 +1,67 @@
+{ "li":{
+    "Who are we?":"¿Quiénes somos?",
+    "Vision and mission":"Visión y misión",
+    "History":"Historia",
+    "Tax information":"Info impositiva",
+    "OUR COMPANY":"NUESTRA EMPRESA",
+    "OUR BUSINESSES":"NUESTROS NEGOCIOS",
+    "Mining":"Minería",
+    "WORK AT CN GROUP": "TRABAJA EN CN GRUPO",
+    "human capital": "Capital humano",
+    "CONTACT": "CONTACTO",
+    "SERVICE STATIONS": "ESTACIONES DE SERVICIO",
+    "Our culture":"Nuestra cultura"
+    
+
+},
+
+"nuestra-empresa-txt":{
+    "text1":"Somos un grupo de empresas que busca brindar",
+    "text2":"soluciones integrales de distribución",
+    "text3":"a través de diferentes unidades de negocios",
+    "text4":"relacionado con",
+    "text5":" Oil&Gas, Agricultura, y Minería."
+
+},
+
+"txt-foo2":{
+    "Footer":" © 2023 CN Group - Todos los derechos reservados"
+},
+
+"conocenos-btn":{
+    "KNOW MORE": "CONOCENOS"
+},
+
+"recuadros-span":{
+    "Leading companies": "Empresas lideres",
+    "in their":"en su",
+    "region promoting":"región promoviendo la",
+    "innovation and excellence":"innovación y excelencia.",
+    "years of experience":"años de experiencia",
+    "in the":" en los",
+    "fields of oil & gas, agriculture,": "rubros de Oil & Gas, Agricultura,",
+    "and MINING": "y MINERÍA.",
+    "operational bases":"bases operativas",
+    "distributed in Salta and":"distribuidas en Salta y el",
+    "northern Chile": "norte de Chile",
+    "collaborators": "colaboradores",
+    "in constant":"en constante",
+    "professional growth":"crecimiento profesional."
+
+},
+
+"texto-card-home":{
+    "completo": "Somos distribuidores oficiales de YPF, tanto de Diésel como de Gas envasado. Contamos con dos estaciones de servicio YPF ubicadas en Salta Capital y Las Lajitas.",
+    "completo2":"Ofrecemos soluciones integrales al campo a través de la distribución de productos y servicios para la Protección y Nutrición de cultivos.",
+    "completo3":"Proporcionamos soluciones integrales y customizadas de gerenciamiento de proyectos para empresas mineras."
+}
+
+}
+
+
+
+
+
+
+
+

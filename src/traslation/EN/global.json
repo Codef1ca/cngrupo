@@ -1,0 +1,59 @@
+{ "li":{
+    "Who are we?":"?Who are we",
+    "Vision and mission":"Vision and mission",
+    "History":"History",
+    "Tax information":"Tax information",
+    "OUR COMPANY":"OUR COMPANY",
+    "OUR BUSINESSES":"OUR BUSINESSES",
+    "Mining":"Mining",
+    "WORK AT CN GROUP": "WORK AT CN GROUP",
+    "human capital": "Human capital",
+    "CONTACT": "CONTACT",
+    "SERVICE STATIONS": "SERVICE STATIONS",
+    "Our culture":"Our culture"
+    
+},
+
+"nuestra-empresa-txt":{
+    "text1":"We are a group of companies that aim to provide",
+    "text2":"comprehensive distribution solutions",
+    "text3":"through various business units",
+    "text4":"related to",
+    "text5":" Oil&Gas, Agriculture, and Mining."
+},
+
+"txt-foo2":{
+    "Footer":" © 2023 CN Group - All rights reserved"
+},
+
+"conocenos-btn":{
+    "KNOW MORE": "KNOW MORE"
+},
+
+
+"recuadros-span":{
+    "Leading companies": "leading companies",
+    "in their":"in their",
+    "region promoting":"region promoting",
+    "innovation and excellence":"innovation and excellence",
+    "years of experience":"years of experience",
+    "in the":"in the",
+    "fields of oil & gas, agriculture,": "fields of Oil & Gas, Agriculture,",
+    "and MINING": "and MINING",
+    "operational bases":"operational bases",
+    "distributed in Salta and":"distributed in Salta and",
+    "northern Chile": "northern Chile",
+    "collaborators": "collaborators",
+    "in constant":"in constant",
+    "professional growth":"professional growth."
+},
+
+"texto-card-home":{
+    "completo": "We are official distributors of YPF, both Diesel and Packaged Gas. We have two YPF service stations located in Salta Capital and Las Lajitas.",
+    "completo2":"We offer comprehensive solutions to the field through the distribution of products and services for Crop Protection and Nutrition.",
+    "completo3":"We provide comprehensive and customized project management solutions for mining companies."
+
+}
+
+
+}
